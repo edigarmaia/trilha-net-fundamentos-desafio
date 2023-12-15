@@ -18,7 +18,14 @@ namespace DesafioFundamentos.Models
             Console.WriteLine("Digite a placa do veículo para estacionar:");
             // Implementado
             string placa = Console.ReadLine();
+
+            // Verificando se a placa é valida
+            if(placa.Length == 8 && placa != null){
             veiculos.Add(placa);
+            }else{
+                Console.WriteLine("Placa inválida: Utilize o formato: ABC-1234");
+                return;
+            }
         }
 
         public void RemoverVeiculo()
